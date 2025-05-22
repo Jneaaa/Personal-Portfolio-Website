@@ -1,0 +1,102 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Your Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fadeIn: 'fadeIn 1.5s ease-in-out',
+            slideUp: 'slideUp 1s ease-out',
+            pulseGlow: 'pulseGlow 2s ease-in-out infinite',
+            shimmer: 'shimmer 2s linear infinite',
+            squirtleRun: 'squirtleRun 10s linear infinite'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' }
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(20px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' }
+            },
+            pulseGlow: {
+              '0%, 100%': { boxShadow: '0 0 10px #00f7ff' },
+              '50%': { boxShadow: '0 0 20px #00f7ff' }
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-1000px 0' },
+              '100%': { backgroundPosition: '1000px 0' }
+            },
+
+          },
+          colors: {
+            neon: '#00f7ff',
+            darkbg: '#0a0a0a'
+          },
+          backgroundImage: {
+            grid: "repeating-linear-gradient(90deg, rgba(255,255,255,0.05) 0, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 50px), repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 50px)"
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-darkbg text-white font-sans relative">
+
+  <div class="absolute inset-0 bg-grid opacity-10 z-0"></div>
+
+  <header class="relative z-10">
+    <nav class="bg-neutral-900 animate-fadeIn shadow-lg border-b border-neon">
+      <ul class="flex justify-center gap-8 p-4 text-neon">
+        <li><a class="hover:text-white transition duration-300" href="index.html">Home</a></li>
+        <li><a class="hover:text-white transition duration-300" href="projects.html">Projects</a></li>
+        <li><a class="hover:text-white transition duration-300" href="work.html">Work</a></li>
+        <li><a class="hover:text-white transition duration-300" href="blog.html">Blog</a></li>
+        <li><a class="hover:text-white transition duration-300" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="relative z-10 max-w-4xl mx-auto px-4 py-16 animate-slideUp">
+    <section
+      class="flex flex-col md:flex-row items-center gap-10 bg-neutral-800/50 backdrop-blur-sm rounded-xl p-8 border border-neon shadow-xl">
+      <div
+        class="flex-shrink-0 w-48 h-48 rounded-full overflow-hidden border-4 border-neon shadow-lg animate-pulseGlow">
+        <img src="persnalpic.jpg" alt="Janea Geresola" class="object-cover w-full h-full" />
+      </div>
+      <div>
+        <h1 class="text-4xl font-bold mb-4 text-neon">Hello, I'm Janea Geresola</h1>
+        <p class="text-gray-300 max-w-xl leading-relaxed">Welcome to my personal site. I'm passionate about coding,
+          UI/UX, and building futuristic products that make life easier. This portfolio showcases my journey,
+          creativity, and commitment to tech innovation. Although, I still have a long way to go in this tech
+          journey of mine.. </p>
+      </div>
+    </section>
+
+    <div class="mt-12 w-full h-68 rounded-lg relative overflow-hidden border-2 border-neon shadow-lg animate-pulseGlow">
+
+      <img
+        src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExODl6Y2tpbzFkNWNnNDk1ZXZsNmM1cHpyM2trMjgyc3J5ZHNtdmI0bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gtuQIOTlQdk9Mx3L5i/giphy.gif"
+        class="w-full h-full object-cover opacity-90" />
+
+
+    </div>
+  </main>
+
+
+
+  <footer class="relative z-10 bg-neutral-900 text-center text-gray-400 py-6 animate-fadeIn border-t border-neon">
+    <p>&copy; 2025 Janea Nicole Geresola. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

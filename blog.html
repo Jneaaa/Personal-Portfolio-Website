@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - Your Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        fadeIn: 'fadeIn 1.5s ease-in-out',
+                        slideUp: 'slideUp 1s ease-out'
+                    },
+                    keyframes: {
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        slideUp: { '0%': { transform: 'translateY(20px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } }
+                    },
+                    colors: { neon: '#00f7ff', darkbg: '#0a0a0a' }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-darkbg text-white font-sans relative">
+    <div class="absolute inset-0 bg-grid opacity-10 z-0"></div>
+
+    <header class="relative z-10">
+        <nav class="bg-neutral-900 animate-fadeIn shadow-lg border-b border-neon">
+            <ul class="flex justify-center gap-8 p-4 text-neon">
+                <li><a class="hover:text-white transition duration-300" href="index.html">Home</a></li>
+                <li><a class="hover:text-white transition duration-300" href="projects.html">Projects</a></li>
+                <li><a class="hover:text-white transition duration-300" href="work.html">Work</a></li>
+                <li><a class="hover:text-white font-bold transition duration-300" href="blog.html">Blog</a></li>
+                <li><a class="hover:text-white transition duration-300" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="relative z-10 max-w-3xl mx-auto px-4 py-16 animate-slideUp">
+        <h1 class="text-3xl font-bold mb-6 text-neon">Blog</h1>
+
+        <article class="mb-12 bg-neutral-800/50 backdrop-blur-sm rounded-lg p-6 border border-neon shadow-lg">
+            <h2 class="text-2xl font-semibold text-neon mb-2">My First Project: Arduino Plant Watering System</h2>
+            <p class="text-gray-400 text-sm mb-2">2017 - 8th Grade</p>
+            <p class="text-gray-300">Back in 8th grade, I built an **automatic plant watering system** using Arduino. It
+                was a simple yet exciting project that helped me learn about sensors, programming, and automation.</p>
+        </article>
+
+        <article class="mb-12 bg-neutral-800/50 backdrop-blur-sm rounded-lg p-6 border border-neon shadow-lg">
+            <h2 class="text-2xl font-semibold text-neon mb-2">My First Website: A Digital Resume</h2>
+            <p class="text-gray-400 text-sm mb-2">2019 - 10th Grade</p>
+            <p class="text-gray-300">In 10th grade, I designed my first website, which was structured like an online
+                resume. It was simple yet effective in showcasing my skills and projects, marking the start of my
+                journey into web development.</p>
+        </article>
+
+        <article class="bg-neutral-800/50 backdrop-blur-sm rounded-lg p-6 border border-neon shadow-lg">
+            <h2 class="text-2xl font-semibold text-neon mb-2">App Startup Collaboration</h2>
+            <p class="text-gray-400 text-sm mb-2">Present - 2025</p>
+            <p class="text-gray-300">Currently, I am working on my first app startup in collaboration with
+                engineering students. It’s an exciting challenge that blends software development, problem-solving, and
+                teamwork.</p>
+        </article>
+
+    </main>
+
+    <footer class="relative z-10 bg-neutral-900 text-center text-gray-400 py-6 animate-fadeIn border-t border-neon">
+        <p>&copy; 2025 Janea Nicole Geresola. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

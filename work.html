@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work Experience - Pokémon Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        fadeIn: 'fadeIn 1.5s ease-in-out',
+                        slideUp: 'slideUp 1s ease-out',
+                        pulseGlow: 'pulseGlow 2s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        slideUp: { '0%': { transform: 'translateY(20px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+                        pulseGlow: { '0%, 100%': { boxShadow: '0 0 10px #00f7ff' }, '50%': { boxShadow: '0 0 20px #00f7ff' } }
+                    },
+                    colors: { neon: '#00f7ff', darkbg: '#0a0a0a' },
+                    backgroundImage: {
+                        pokeball: "url('pokeball-pattern.png')",
+                        water: "url('water-texture.png')"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-darkbg text-white font-sans relative">
+
+    <div class="absolute inset-0 bg-water opacity-15 z-0"></div>
+
+    <header class="relative z-10">
+        <nav class="bg-neutral-900 animate-fadeIn shadow-lg border-b border-neon">
+            <ul class="flex justify-center gap-8 p-4 text-neon">
+                <li><a class="hover:text-white transition duration-300" href="index.html">Home</a></li>
+                <li><a class="hover:text-white transition duration-300" href="projects.html">Projects</a></li>
+                <li><a class="hover:text-white font-bold transition duration-300" href="work.html">Work</a></li>
+                <li><a class="hover:text-white transition duration-300" href="blog.html">Blog</a></li>
+                <li><a class="hover:text-white transition duration-300" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="relative z-10 max-w-3xl mx-auto px-4 py-16 text-center animate-slideUp">
+        <h1 class="text-3xl font-bold mb-6 text-neon">My Resume</h1>
+        <h2 class="text-xl font-semibold mb-6 text-blue-400">This resume has not been updated to the latest. Kindly send
+            me an email for the updated version! 😁</h2>
+
+
+        <div class="bg-neutral-800/50 backdrop-blur-sm rounded-lg p-6 border border-neon shadow-lg animate-pulseGlow">
+            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTBrN3o3ZWVsOTg0cnNjeTFwaXBqM2MzeDE1aDh0OHp1cm5mM3RzZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/C7yrmfAcGSLLvThkUw/giphy.gif"
+                alt="Squirtle Icon" class="mx-auto w-20 h-20 mb-4">
+            <p class="mt-4">
+                <a href="resume.pdf"
+                    class="bg-neon text-black font-bold py-2 px-4 rounded-lg hover:bg-white transition duration-300">
+                    Download Resume (PDF)
+                </a>
+            </p>
+        </div>
+    </main>
+
+    <footer class="relative z-10 bg-neutral-900 text-center text-gray-400 py-6 animate-fadeIn border-t border-neon">
+        <p>&copy; 2025 Janea Nicole Geresola. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

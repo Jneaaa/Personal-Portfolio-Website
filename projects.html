@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - Your Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        fadeIn: 'fadeIn 1.5s ease-in-out',
+                        slideUp: 'slideUp 1s ease-out',
+                        pulseGlow: 'pulseGlow 2s ease-in-out infinite',
+                        shimmer: 'shimmer 2s linear infinite',
+                        squirtleRun: 'squirtleRun 10s linear infinite'
+                    },
+                    keyframes: {
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        slideUp: { '0%': { transform: 'translateY(20px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+                        pulseGlow: { '0%, 100%': { boxShadow: '0 0 10px #00f7ff' }, '50%': { boxShadow: '0 0 20px #00f7ff' } },
+                        shimmer: { '0%': { backgroundPosition: '-1000px 0' }, '100%': { backgroundPosition: '1000px 0' } },
+                        squirtleRun: { '0%': { transform: 'translateX(-10%)' }, '100%': { transform: 'translateX(110%)' } }
+                    },
+                    colors: { neon: '#00f7ff', darkbg: '#0a0a0a' },
+                    backgroundImage: {
+                        grid: "repeating-linear-gradient(90deg, rgba(255,255,255,0.05) 0, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 50px), repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 50px)"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-darkbg text-white font-sans relative min-h-screen flex flex-col">
+    <!-- Grid Background -->
+    <div class="absolute inset-0 bg-grid opacity-10 z-0"></div>
+
+    <header class="relative z-10">
+        <nav class="bg-neutral-900 animate-fadeIn shadow-lg border-b border-neon">
+            <ul class="flex justify-center gap-8 p-4 text-neon">
+                <li><a class="hover:text-white transition duration-300" href="index.html">Home</a></li>
+                <li><a class="hover:text-white font-bold transition duration-300" href="projects.html">Projects</a></li>
+                <li><a class="hover:text-white transition duration-300" href="work.html">Work</a></li>
+                <li><a class="hover:text-white transition duration-300" href="blog.html">Blog</a></li>
+                <li><a class="hover:text-white transition duration-300" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="relative z-10 max-w-3xl mx-auto px-4 py-16 animate-slideUp flex-grow">
+        <h1 class="text-3xl font-bold mb-6 text-neon">Projects</h1>
+        <div class="space-y-12">
+            <div class="bg-neutral-800/50 backdrop-blur-sm rounded-lg p-6 border border-neon shadow-lg">
+                <img src="onlineshop.png" alt="Project 1" class="rounded-lg mb-4">
+                <h2 class="text-2xl font-semibold text-neon">Online Shopping Project</h2>
+                <a href="https://jneaaa.github.io/Online_Shopping-FinalProj/"
+                    class="text-blue-400 hover:underline">CLICK HERE!</a>
+                <p class="text-gray-300 mt-2">A simple online luxury shop inspired from Versace's website using basic
+                    HTML, CSS & JS. It is still an on-going project.</p>
+            </div>
+            <div class="bg-neutral-800/50 backdrop-blur-sm rounded-lg p-6 border border-neon shadow-lg">
+                <img src="honey.png" alt="Project 2" class="rounded-lg mb-4">
+                <h2 class="text-2xl font-semibold text-neon">Honey Business</h2>
+                <a href="https://jneaaa.github.io/firstwebsite_geresola/index.html"
+                    class="text-blue-400 hover:underline">CLICK HERE!</a>
+                <p class="text-gray-300">Another E-commerce site but for a Honey Business, this is just a demo website I
+                    made last sem</p>
+            </div>
+            <div class="bg-neutral-800/50 backdrop-blur-sm rounded-lg p-6 border border-neon shadow-lg">
+                <img src="LECA app.jpeg" alt="Project 3" class="rounded-lg mb-4">
+                <h2 class="text-2xl font-semibold text-neon">Project LECA</h2>
+                <p class="text-gray-300">A digital platform for the agricultural market, This is an on-going project as
+                    well and is soon to be published/deployed for users to try on.</p>
+            </div>
+        </div>
+
+        <div
+            class="mt-12 w-full h-36 rounded-lg relative overflow-hidden border-2 border-neon shadow-lg animate-pulseGlow">
+            <div class="absolute inset-0 flex items-center justify-center text-white font-bold z-10 bg-black/30">
+                More Coming Soon!...
+            </div>
+        </div>
+    </main>
+
+    <footer
+        class="relative z-10 bg-neutral-900 text-center text-gray-400 py-6 animate-fadeIn border-t border-neon w-full">
+        <p>&copy; 2025 Janea Nicole Geresola. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
